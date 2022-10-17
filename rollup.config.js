@@ -13,9 +13,7 @@ export default {
         format: 'iife'
     },
     plugins: [
-        commonjs({
-            include: /node_modules/
-        }),
+        commonjs(),
         replace({
             preventAssignment: true,
             'process.env.NODE_ENV': JSON.stringify('development'),
